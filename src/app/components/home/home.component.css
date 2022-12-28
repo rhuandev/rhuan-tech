@@ -1,0 +1,321 @@
+.main {
+  background: linear-gradient(-45deg, #125b76, #1c5063, #17313b, #265567);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.main h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-family: Kanit Bold;
+  color: #ddf6ff;
+  font-size: 24px;
+}
+.main .subtitulo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Kanit;
+  color: #ddf6ff;
+  font-size: 22px;
+}
+.main .neon {
+  background-image: linear-gradient(163deg, #1c5063 0%, #1c5063 100%);
+  border-radius: 12px;
+  transition: all 0.3s;
+  width: 190px;
+  height: 254px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .neon .card {
+  width: 190px;
+  height: 254px;
+  background: #ddf6ff;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.main .neon .card:hover {
+  box-shadow: 0px 0px 30px 1px rgb(48, 217, 255);
+  background-color: #17313b;
+  transform: scale(0.97);
+  border-radius: 10px;
+}
+.main .neon .card .blob {
+  height: 10px;
+  width: 75%;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+  background-color: #17313b;
+  visibility: visible;
+  transition: all 0.3s;
+}
+.main .neon .card:hover .blob {
+  height: 0;
+}
+.main .neon .card .img {
+  display: flex;
+  margin: 30px auto 10px auto;
+  width: 70px;
+  height: 70px;
+  background-image: url("../../../assets/0.jpg");
+  background-repeat: no-repeat;
+  background-size: 94px 88px;
+  border-radius: 50%;
+  background-position-x: -16px;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.main .neon .card:hover .img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px 10px 0 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 206px 193px;
+  background-position-x: -15px;
+  z-index: 99999;
+}
+.main .neon .card h2 {
+  padding: 15px 10px;
+  font-size: 31px;
+  transition: all 0.1s;
+  z-index: -99;
+  line-height: 25px;
+  font-family: Kanit;
+  color: #1c5063;
+}
+.main .neon .card span {
+  font-size: 25px;
+  font-family: Kanit;
+}
+.main .neon .card:hover h2 {
+  display: none;
+  width: 100%;
+  transition: all 0.5s;
+}
+.main .neon .card > p {
+  display: none;
+  transition: all 0.75s;
+}
+.main .neon .card > p > svg {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.main .neon .card:hover > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  margin-top: 15px;
+  transition: all 0.1s;
+}
+.main .gerador {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-family: Kanit Bold;
+  color: #ddf6ff;
+  font-size: 20px;
+}
+.main .frase {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: Kanit Bold;
+  color: #ddf6ff;
+  font-size: 20px;
+}
+.main button {
+  margin-top: 10px;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  touch-action: manipulation;
+}
+.main .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(0deg, 0%, 0%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.main .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left, hsl(209deg, 100%, 16%) 0%, hsl(189deg, 100%, 32%) 8%, hsl(180deg, 100%, 32%) 92%, hsl(229deg, 100%, 16%) 100%);
+}
+.main .front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: Kanit;
+  color: #1c5063;
+  background: hsl(175deg, 100%, 50%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.main button:hover {
+  filter: brightness(110%);
+}
+.main button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.main button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+.main button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.main button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+.main button:focus:not(:focus-visible) {
+  outline: none;
+}
+.main .donatebox {
+  position: absolute;
+  top: 88%;
+  left: 95%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.main .donatebox .donate {
+  width: 66px;
+  height: 100px;
+}
+.main .donatebox .donation {
+  display: flex;
+  position: absolute;
+  width: 250px;
+  height: 0px;
+  opacity: 0;
+  background-color: #ddf6ff;
+  bottom: 100%;
+  transition: opacity 0.5s, height 0.5s;
+  padding: 20px;
+  overflow: auto;
+  border-radius: 10px;
+}
+.main .donatebox .donation .textbox {
+  padding-bottom: 620px;
+}
+.main .donatebox .donation .textbox .text {
+  opacity: 0;
+  height: 0;
+  word-break: break-word;
+  transition: opacity 0.6s, height 0.5s;
+  text-align: justify;
+  padding: 5px;
+  font-family: Kanit;
+}
+.main .donatebox .donation .textbox .text span {
+  padding: 5px;
+}
+.main .donatebox .donation .textbox .text span svg {
+  width: 19px;
+  height: 18px;
+  margin-top: 1px;
+  padding-top: 3px;
+}
+.main .donatebox .donation .textbox .text span svg:active {
+  fill: #149bcd;
+}
+
+@media (min-width: 1750px) {
+  .main .donatebox {
+    top: 88%;
+  }
+}
+@media (max-width: 1749px) {
+  .main .donatebox {
+    top: 88%;
+  }
+}
+@media (max-width: 1470px) {
+  .main .donatebox {
+    left: 92%;
+  }
+}
+@media (max-width: 970px) {
+  .main .donatebox {
+    left: 90%;
+  }
+}
+@media (max-width: 850px) {
+  .main {
+    padding: 0px 50px;
+  }
+  .main .gerador, .main .frase {
+    text-align: center;
+  }
+}
+@media (max-width: 755px) {
+  .main .donatebox {
+    left: 87%;
+  }
+}
+@media (max-width: 530px) {
+  .main .donatebox {
+    left: 82%;
+  }
+}/*# sourceMappingURL=home.component.css.map */
